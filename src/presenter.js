@@ -7,14 +7,23 @@ const age = document.querySelector("#age-selector");
 button.addEventListener("click", (event) =>{
 
   var vocativo = "";
+  var periodo = "";
+
   const edad = Number.parseInt(age.value);
+  let fechaActual = new Date();
+  let horaActual = fechaActual.getHours();
+
 
   if( gender.value == "Masculino") vocativo = "Sr. ";
   else if( gender.value == "Femenino") vocativo = "Sra. ";
 
   if(edad <= 30) vocativo = "";
 
-  div.innerHTML = "<h1>Hola "+vocativo+nombre.value+" 🙂</h1>";
+  if(horaActual >= 5 && horaActual <= 11) periodo = "Buenos dias ";
+  else if(horaActual >= 12 && horaActual <=18) periodo = "Buenas tardes ";
+  else periodo = "Buenas noches ";
+
+  div.innerHTML = "<h1>" +periodo+vocativo+nombre.value+" 🙂</h1>";
 
 });
 
