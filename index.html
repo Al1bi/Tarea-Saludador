@@ -1,23 +1,28 @@
 <html>
   <body>
     <!-- <h1>Hola 🙂</h1> -->
-
-    <div>
-      Nombre: 
+    <input type="submit" value="ES" id="es-button" />
+    <input type="submit" value="EN" id="en-button" />
+    
+    <div id="name-div">
+      <span id="name-label">Nombre: </span>
       <input type="text" id="nombre-usuario" />  
     </div>
-    <div>
-      Genero: 
+
+    <div id="gender-div">
+      <span id="gender-label">Genero: </span>
       <select name="genero" id="gender-selector" >
         <option>Femenino</option>
         <option>Masculino</option>
         <option>Otro</option>
       </select>
     </div>
-    <div>
-      Edad: 
+    
+    <div id="age-div">
+      <span id="age-label">Edad: </span>
       <input type="number" id="age-selector" />
     </div>
+
     <input type="submit" value="Saludar" id="saludar-button" />
     
 
